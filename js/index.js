@@ -89,6 +89,7 @@ const pContact = document.querySelectorAll(".contact p");
 pContact[0].textContent = siteContent["contact"]["address"];
 pContact[1].textContent = siteContent.contact.phone;
 pContact[2].textContent = siteContent["contact"]["email"];
-// const phoneContact = document.querySelector(".contact");
-// phoneContact.textContent = siteContent["contact"]["phone"];
-// console.log(pContact);
+
+//Footer
+const footerCopy = document.querySelectorAll("footer");
+footerCopy[0].textContent = siteContent.footer.copyright;
