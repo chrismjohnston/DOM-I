@@ -46,6 +46,23 @@ const siteContent = {
 const logo = document.getElementById("logo-img");
 logo.setAttribute("src", siteContent["nav"]["img-src"]);
 
+//append and prepend
+const nav1 = document.querySelector("nav");
+const newElement1 = document.createElement("a");
+newElement1.href = "#";
+newElement1.style.color = "green";
+newElement1.textContent = "Home";
+
+const newElement2 = document.createElement("a");
+newElement2.href = "#";
+newElement2.style.color = "green";
+newElement2.textContent = "Career";
+
+nav1.prepend(newElement1);
+nav1.appendChild(newElement2);
+
+console.log(nav1);
+
 //nav bar links
 const navbar = document.querySelectorAll("a");
 navbar[0].textContent = siteContent["nav"]["nav-item-0"];
@@ -54,6 +71,7 @@ navbar[2].textContent = siteContent["nav"]["nav-item-2"];
 navbar[3].textContent = siteContent["nav"]["nav-item-3"];
 navbar[4].textContent = siteContent["nav"]["nav-item-4"];
 navbar[5].textContent = siteContent["nav"]["nav-item-5"];
+navbar.forEach(item => (item.style.color = "green"));
 
 //title
 const h1Title = document.querySelector("h1");
