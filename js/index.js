@@ -81,6 +81,8 @@ navbar[4].textContent = siteContent["nav"]["nav-item-4"];
 navbar[5].textContent = siteContent["nav"]["nav-item-5"];
 navbar.forEach(item => (item.style.color = "green"));
 
+
+
 //title
 const h1Title = document.querySelector("h1");
 h1Title.textContent = siteContent["cta"]["h1"];
