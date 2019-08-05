@@ -53,14 +53,17 @@ const newElement1 = document.createElement("a");
 newElement1.href = "#";
 newElement1.style.color = "green";
 newElement1.textContent = "Home";
+nav1.appendChild(newElement1)
 
 const newElement2 = document.createElement("a");
 newElement2.href = "#";
 newElement2.style.color = "green";
 newElement2.textContent = "Career";
+nav1.appendChild(newElement2)
 
-nav1.appendChild(newElement2);
-nav1.prepend(newElement1);
+// nav1.prepend(newElement1);
+// nav1.appendChild(newElement2);
+
 
 
 console.log(newElement1);
