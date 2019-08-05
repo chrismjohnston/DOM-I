@@ -43,6 +43,9 @@ const siteContent = {
   }
 };
 
+
+
+
 // Example: Update the img src for the logo
 const logo = document.getElementById("logo-img");
 logo.setAttribute("src", siteContent["nav"]["img-src"]);
@@ -66,7 +69,6 @@ nav1.appendChild(newElement2)
 
 
 
-console.log(newElement1);
 
 
 //nav bar links
@@ -87,6 +89,15 @@ ctaButton.textContent = siteContent["cta"]["button"];
 const ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute("src", siteContent["cta"]["img-src"]);
 
+
+ctaButton.addEventListener('focus', (event) => {
+  event.target.style.background = 'blue';    
+});
+
+ctaButton.addEventListener('blur', (event) => {
+  event.target.style.background = '';    
+});
+
 //Main Content
 const h4MainContent = document.querySelectorAll("h4");
 h4MainContent[0].textContent = siteContent["main-content"]["features-h4"];
@@ -94,6 +105,7 @@ h4MainContent[1].textContent = siteContent["main-content"]["about-h4"];
 h4MainContent[2].textContent = siteContent["main-content"]["services-h4"];
 h4MainContent[3].textContent = siteContent["main-content"]["product-h4"];
 h4MainContent[4].textContent = siteContent["main-content"]["vision-h4"];
+h4MainContent.forEach(item => (item.style.color = "purple"));
 
 const pMainContent = document.querySelectorAll("p");
 pMainContent[0].textContent = siteContent["main-content"]["features-content"];
@@ -101,6 +113,7 @@ pMainContent[1].textContent = siteContent["main-content"]["about-content"];
 pMainContent[2].textContent = siteContent["main-content"]["services-content"];
 pMainContent[3].textContent = siteContent["main-content"]["product-content"];
 pMainContent[4].textContent = siteContent["main-content"]["vision-content"];
+pMainContent.forEach(item => (item.style.background = "gold"));
 
 const middleImage = document.getElementById("middle-img");
 middleImage.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
