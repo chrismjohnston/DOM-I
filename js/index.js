@@ -43,6 +43,9 @@ const siteContent = {
   }
 };
 
+
+
+
 // Example: Update the img src for the logo
 const logo = document.getElementById("logo-img");
 logo.setAttribute("src", siteContent["nav"]["img-src"]);
@@ -53,16 +56,20 @@ const newElement1 = document.createElement("a");
 newElement1.href = "#";
 newElement1.style.color = "green";
 newElement1.textContent = "Home";
+nav1.appendChild(newElement1)
 
 const newElement2 = document.createElement("a");
 newElement2.href = "#";
 newElement2.style.color = "green";
 newElement2.textContent = "Career";
+nav1.appendChild(newElement2)
 
-nav1.prepend(newElement1);
-nav1.appendChild(newElement2);
+// nav1.prepend(newElement1);
+// nav1.appendChild(newElement2);
 
-console.log(nav1);
+
+
+
 
 //nav bar links
 const navbar = document.querySelectorAll("a");
@@ -74,6 +81,8 @@ navbar[4].textContent = siteContent["nav"]["nav-item-4"];
 navbar[5].textContent = siteContent["nav"]["nav-item-5"];
 navbar.forEach(item => (item.style.color = "green"));
 
+
+
 //title
 const h1Title = document.querySelector("h1");
 h1Title.textContent = siteContent["cta"]["h1"];
@@ -82,6 +91,15 @@ ctaButton.textContent = siteContent["cta"]["button"];
 const ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute("src", siteContent["cta"]["img-src"]);
 
+
+ctaButton.addEventListener('focus', (event) => {
+  event.target.style.background = 'blue';    
+});
+
+ctaButton.addEventListener('blur', (event) => {
+  event.target.style.background = '';    
+});
+
 //Main Content
 const h4MainContent = document.querySelectorAll("h4");
 h4MainContent[0].textContent = siteContent["main-content"]["features-h4"];
@@ -89,6 +107,7 @@ h4MainContent[1].textContent = siteContent["main-content"]["about-h4"];
 h4MainContent[2].textContent = siteContent["main-content"]["services-h4"];
 h4MainContent[3].textContent = siteContent["main-content"]["product-h4"];
 h4MainContent[4].textContent = siteContent["main-content"]["vision-h4"];
+h4MainContent.forEach(item => (item.style.color = "purple"));
 
 const pMainContent = document.querySelectorAll("p");
 pMainContent[0].textContent = siteContent["main-content"]["features-content"];
@@ -96,6 +115,7 @@ pMainContent[1].textContent = siteContent["main-content"]["about-content"];
 pMainContent[2].textContent = siteContent["main-content"]["services-content"];
 pMainContent[3].textContent = siteContent["main-content"]["product-content"];
 pMainContent[4].textContent = siteContent["main-content"]["vision-content"];
+pMainContent.forEach(item => (item.style.background = "gold"));
 
 const middleImage = document.getElementById("middle-img");
 middleImage.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
